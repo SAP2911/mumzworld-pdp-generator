@@ -2,7 +2,7 @@
 
 **Track: A — AI Engineering Intern**  
 **GitHub:** https://github.com/SAP2911/mumzworld-pdp-generator  
-**Loom:** _(add link after recording)_  
+**Loom:** https://www.loom.com/share/4ad8cc2875974866bf50f842ecd844a8  
 **Submitted by:** Sai Pranav H R
 
 ---
