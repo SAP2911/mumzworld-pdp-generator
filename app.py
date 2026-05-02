@@ -68,9 +68,11 @@ with st.sidebar:
             if st.button(label, key=f"s_{s.stem}", use_container_width=True):
                 st.session_state["sample_path"] = str(s)
                 st.session_state["sample_name"] = label
-                # Clear old result when a new sample is selected
+                # Reset uploader so it doesn't override the sample
+                st.session_state["uploader_reset"] = st.session_state.get("uploader_reset", 0) + 1
                 st.session_state.pop("last_result", None)
                 st.session_state.pop("last_image_id", None)
+                st.session_state.pop("nativeness_score", None)
     else:
         st.warning("Run `python data/download_samples.py` to generate samples.")
 
@@ -96,6 +98,7 @@ with col_left:
         "Drop a PNG / JPG / WebP here",
         type=["png", "jpg", "jpeg", "webp"],
         label_visibility="visible",
+        key=f"uploader_{st.session_state.get('uploader_reset', 0)}",
     )
 
     # Detect when user clears the uploader → wipe old results
@@ -129,13 +132,15 @@ with col_left:
     run_clicked = st.button("⚡ Generate PDP", type="primary", use_container_width=True)
     st.caption("⏱ ~5–10 seconds · 4 AI passes (vision → EN → AR → critique)")
 
-    # Clear button
-    if st.session_state.get("last_result"):
-        if st.button("🗑 Clear results", use_container_width=True):
+    # Clear button — visible whenever a sample is loaded or results exist
+    if st.session_state.get("sample_path") or st.session_state.get("last_result"):
+        if st.button("🗑 Clear", use_container_width=True):
             st.session_state.pop("last_result", None)
             st.session_state.pop("last_image_id", None)
             st.session_state.pop("sample_path", None)
             st.session_state.pop("sample_name", None)
+            st.session_state.pop("nativeness_score", None)
+            st.session_state["uploader_reset"] = st.session_state.get("uploader_reset", 0) + 1
             st.rerun()
 
 # ── Run pipeline ──────────────────────────────────────────────────────────────

@@ -21,7 +21,10 @@ RULES:
 2. Title must be ≤70 characters, specific, and SEO-friendly. Not "High-Quality Baby Stroller" — prefer "Compact Foldable Baby Stroller with Adjustable Canopy, 0-36m".
 3. Short description is 2-3 sentences. Lead with the primary benefit. No superlatives without evidence.
 4. If a spec cannot be determined from the provided attributes, omit it — do not guess.
-5. Safety warnings must come from the category standards provided, not invented.
+5. Safety warnings come from two sources — include BOTH:
+   (a) The mandatory_warnings listed in the category context: copy them faithfully, adapt wording only to fit the specific product.
+   (b) Feature-derived warnings from the extracted attributes: if you see small parts → "Choking hazard — small parts. Not suitable for children under 3 years."; batteries visible → "Contains batteries — keep out of reach of young children"; cords/straps → "Ensure cords/straps are not accessible to unsupervised children"; sharp edges → "Check for sharp edges before use."
+   Never write generic placeholders like "Check product label for safety information" unless no other warning applies.
 6. Assign honest confidence scores per field.
 
 Return ONLY valid JSON with this exact structure:
@@ -87,7 +90,7 @@ Extraction notes: {attrs.extraction_notes}
 Category context (from knowledge base):
 - Category: {category_context.get('category', 'general')}
 - Standard age range: {category_context.get('age_range', 'not specified')}
-- Mandatory safety warnings: {'; '.join(category_context.get('mandatory_warnings', [])[:3])}
+- Mandatory safety warnings: {'; '.join(category_context.get('mandatory_warnings', []))}
 - Typical features for this category: {', '.join(category_context.get('common_features', [])[:6])}"""
 
 

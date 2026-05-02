@@ -271,9 +271,8 @@
     "safety_standards": ["CE marked", "ASTM safety standards"],
     "age_range": "Consult product label",
     "mandatory_warnings": [
-      "Keep out of reach of children under 3 unless specified",
-      "Adult supervision recommended",
-      "Check product label for specific safety information"
+      "Always check the age suitability label before use",
+      "Adult supervision required for children under 3 years"
     ],
     "common_features": [],
     "arabic_marketing_adjectives": ["آمن", "عملي", "مريح"],
