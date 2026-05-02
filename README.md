@@ -1,9 +1,25 @@
 # Mumzworld PDP Generator
 
-**Track A — AI Engineering Intern Assessment**  
-**GitHub:** https://github.com/SAP2911/mumzworld-pdp-generator
+**Track: A — AI Engineering Intern**  
+**GitHub:** https://github.com/SAP2911/mumzworld-pdp-generator  
+**Loom:** _(add link after recording)_  
+**Submitted by:** Sai Pranav H R
 
-A multimodal AI pipeline that turns a product image into a publish-ready Product Detail Page (PDP) in English and Arabic. Built for Mumzworld's catalog team: handles bilingual copy at scale with per-field confidence scoring, a self-critique loop, and a human-review flag when the model is unsure.
+---
+
+## Summary
+
+A multimodal AI pipeline that turns a single product image into a publish-ready Product Detail Page (PDP) in English and Gulf Arabic — in under 10 seconds. Built for Mumzworld's catalog operations team: 4 chained agents handle vision extraction, English copy, Arabic copy (native Gulf register, not a translation), and a self-critique pass that catches hallucinations before output. Every field carries a confidence score; anything below the threshold is nulled rather than guessed. A `review_required` flag is raised automatically when confidence is low or the critique finds errors, keeping a human in the loop for uncertain cases.
+
+---
+
+## AI Usage Note
+
+- **Claude Sonnet 4.6 via Claude Code (Antigravity)** — primary development harness for architecture, Pydantic schemas, agent prompt engineering, Streamlit UI, and eval harness (pair-coding and agent loops throughout)
+- **Groq free API — `meta-llama/llama-4-scout-17b-16e-instruct`** — all 4 AI pipeline passes (vision, EN PDP, AR PDP, self-critique) at ~5s/run
+- **Arabic system prompts** required 3 iterations of manual correction — Claude's first-pass prompt produced translated English; fixed by embedding Gulf Arabic examples and explicit anti-translation rules
+- Confidence gate thresholds (0.70 / 0.40) calibrated manually after observing over-flagging in early eval runs
+- All 15 eval test case labels and expected outputs written by hand; Claude generated the harness scaffolding
 
 ---
 
