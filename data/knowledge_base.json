@@ -1,0 +1,312 @@
+{
+  "categories": {
+    "stroller": {
+      "arabic_category_name": "عربة أطفال",
+      "safety_standards": ["EN 1888:2012", "ASTM F833", "BS EN 1888"],
+      "age_range": "0-36 months",
+      "mandatory_warnings": [
+        "Always secure child with the 5-point harness",
+        "Do not exceed maximum weight limit stated on label",
+        "Never leave child unattended in stroller",
+        "Apply brakes whenever stroller is stationary",
+        "Do not hang heavy bags on handlebar — risk of tipping"
+      ],
+      "common_features": [
+        "foldable frame", "sun canopy", "suspension system", "storage basket",
+        "adjustable handlebar", "reclining seat", "5-point harness",
+        "swivel front wheels", "puncture-proof tyres", "bumper bar"
+      ],
+      "arabic_marketing_adjectives": ["متين", "خفيف الوزن", "عملي", "قابل للطي", "مريح", "آمن", "أنيق"],
+      "arabic_feature_phrases": [
+        "إطارات مقاومة للثقب", "مقبض قابل للتعديل", "نظام تعليق متطور",
+        "سهل الطي بيد واحدة", "مظلة واسعة للحماية من الشمس"
+      ],
+      "keywords": ["stroller", "pram", "buggy", "pushchair", "travel system", "عربة"]
+    },
+    "car_seat": {
+      "arabic_category_name": "كرسي سيارة للأطفال",
+      "safety_standards": ["ECE R44/04", "ECE R129 i-Size", "ASTM F213", "EN 14344"],
+      "age_range": "0-12 years (varies by group)",
+      "mandatory_warnings": [
+        "Always install rear-facing for children under 15 months",
+        "Never use in a seat with active front airbag",
+        "Check installation at every journey — refer to vehicle manual",
+        "Do not use second-hand car seats — hidden damage may be present",
+        "Replace immediately after any collision"
+      ],
+      "common_features": [
+        "ISOFIX connectors", "side impact protection", "adjustable headrest",
+        "5-point harness", "recline positions", "easy-clean cover",
+        "load leg", "rebound bar", "EPS foam lining"
+      ],
+      "arabic_marketing_adjectives": ["آمن ومعتمد", "متين", "مريح", "سهل التركيب", "قابل للتعديل"],
+      "arabic_feature_phrases": [
+        "حماية جانبية من الاصطدام", "نظام تثبيت ISOFIX", "حزام خماسي النقاط",
+        "وضعيات انتكاس متعددة", "بطانة قابلة للغسيل"
+      ],
+      "keywords": ["car seat", "infant seat", "booster seat", "car seat group", "i-size", "كرسي سيارة"]
+    },
+    "baby_carrier": {
+      "arabic_category_name": "حمالة أطفال",
+      "safety_standards": ["EN 13209-2", "ASTM F2236"],
+      "age_range": "0-36 months (up to 20 kg)",
+      "mandatory_warnings": [
+        "Always keep baby's face visible and airways clear",
+        "Baby's chin must not rest on chest — risk of suffocation",
+        "Do not use while cycling, cooking, or near open flames",
+        "Check all buckles and straps before each use",
+        "Follow weight limits strictly"
+      ],
+      "common_features": [
+        "ergonomic seat", "lumbar support", "padded shoulder straps",
+        "multiple carry positions", "newborn insert", "sun hood",
+        "breathable mesh", "sleeping hood", "front and back carry"
+      ],
+      "arabic_marketing_adjectives": ["مريح للأم والطفل", "إرغونومي", "متين", "سهل الارتداء", "قابل للتنفس"],
+      "arabic_feature_phrases": [
+        "وضعية الجلوس الإرغونومية", "دعم قطني للأم", "أحزمة كتف مبطنة",
+        "قماش شبكي قابل للتنفس", "غطاء ظل للحماية من الشمس"
+      ],
+      "keywords": ["carrier", "baby carrier", "wrap", "sling", "ergo", "حمالة", "كنغر"]
+    },
+    "feeding_bottle": {
+      "arabic_category_name": "زجاجة رضاعة",
+      "safety_standards": ["BPA-free certification", "EN 14350", "FDA approved materials"],
+      "age_range": "0-24 months",
+      "mandatory_warnings": [
+        "Always sterilize before first use",
+        "Check teat for signs of wear — replace every 4-6 weeks",
+        "Do not microwave — check heating instructions",
+        "Never leave baby to feed alone with bottle"
+      ],
+      "common_features": [
+        "anti-colic valve", "BPA-free plastic or glass", "slow/medium/fast flow teat",
+        "wide neck opening", "measurement markings", "easy-grip shape",
+        "leak-proof design", "dishwasher safe"
+      ],
+      "arabic_marketing_adjectives": ["خالٍ من مادة BPA", "آمن", "مضاد للمغص", "سهل التنظيف", "عملي"],
+      "arabic_feature_phrases": [
+        "خالٍ من البيسفينول A", "صمام مضاد للهواء", "حلمة بتدفق بطيء",
+        "آمن للغسالة الآلية", "تدرجات القياس الواضحة"
+      ],
+      "keywords": ["bottle", "feeding bottle", "baby bottle", "sippy", "زجاجة", "رضاعة"]
+    },
+    "breast_pump": {
+      "arabic_category_name": "شفاطة حليب",
+      "safety_standards": ["CE marked", "FDA Class II Medical Device", "BPA-free"],
+      "age_range": "For nursing mothers",
+      "mandatory_warnings": [
+        "Sterilize all parts before first use",
+        "Consult healthcare provider if experiencing pain during use",
+        "Do not share pump parts with other mothers",
+        "Replace membranes and valves regularly"
+      ],
+      "common_features": [
+        "electric or manual", "single or double pumping", "adjustable suction",
+        "massage mode", "rechargeable battery", "quiet motor",
+        "closed system", "multiple flange sizes", "LCD display"
+      ],
+      "arabic_marketing_adjectives": ["هادئ", "فعّال", "مريح", "محمول", "سهل الاستخدام"],
+      "arabic_feature_phrases": [
+        "نظام مغلق للنظافة", "محرك صامت", "بطارية قابلة للشحن",
+        "قوة شفط قابلة للتعديل", "وضع تدليك لتحفيز الحليب"
+      ],
+      "keywords": ["breast pump", "pump", "electric pump", "manual pump", "شفاطة", "مضخة حليب"]
+    },
+    "crib": {
+      "arabic_category_name": "سرير أطفال",
+      "safety_standards": ["EN 716", "ASTM F1169", "JPMA certified"],
+      "age_range": "0-24 months",
+      "mandatory_warnings": [
+        "Use only the mattress supplied or recommended — gaps risk entrapment",
+        "Do not add pillows, duvets, or loose bedding to infant sleep space",
+        "Ensure all slats are intact and evenly spaced (max 6.5cm)",
+        "Lower base before baby can sit unaided",
+        "Discontinue use when child can climb out"
+      ],
+      "common_features": [
+        "adjustable base height", "teething rail", "convertible design",
+        "slatted sides for airflow", "casters with brakes", "drop-side mechanism",
+        "solid wood or metal construction", "mattress included"
+      ],
+      "arabic_marketing_adjectives": ["آمن", "متين", "واسع", "مريح", "قابل للتحويل"],
+      "arabic_feature_phrases": [
+        "ارتفاع قاعدة قابل للتعديل", "حاجز لحماية اللثة", "قابل للتحويل لسرير أطفال أكبر",
+        "جوانب شبكية لضمان تهوية جيدة"
+      ],
+      "keywords": ["crib", "cot", "baby bed", "bassinet", "Moses basket", "سرير", "مهد"]
+    },
+    "baby_monitor": {
+      "arabic_category_name": "جهاز مراقبة الطفل",
+      "safety_standards": ["CE marked", "FCC certified", "FHSS technology"],
+      "age_range": "0-36 months",
+      "mandatory_warnings": [
+        "Keep monitor and all cords at least 1 metre from crib",
+        "Never place camera within reach of child — strangulation hazard from cords",
+        "Secure all cables out of baby's reach"
+      ],
+      "common_features": [
+        "HD camera", "night vision", "two-way audio", "temperature sensor",
+        "lullabies", "zoom and pan", "Wi-Fi or DECT connection",
+        "parent unit display", "VOX mode", "range up to 300m"
+      ],
+      "arabic_marketing_adjectives": ["واضح", "موثوق", "آمن", "سهل الإعداد", "ذكي"],
+      "arabic_feature_phrases": [
+        "رؤية ليلية واضحة", "صوت ثنائي الاتجاه", "استشعار درجة الحرارة",
+        "نطاق تغطية واسع", "وضع تنشيط بالصوت"
+      ],
+      "keywords": ["monitor", "baby monitor", "video monitor", "camera", "مراقبة", "كاميرا طفل"]
+    },
+    "high_chair": {
+      "arabic_category_name": "كرسي طعام للأطفال",
+      "safety_standards": ["EN 14988", "ASTM F404", "JPMA certified"],
+      "age_range": "6 months - 36 months",
+      "mandatory_warnings": [
+        "Always use safety harness — never leave child unattended",
+        "Do not use without tray or table",
+        "Check all moving parts before each use",
+        "Maximum weight 15 kg unless otherwise stated"
+      ],
+      "common_features": [
+        "5-point harness", "adjustable seat height", "removable tray",
+        "reclining backrest", "footrest", "easy-clean coating",
+        "foldable for storage", "crotch post", "padded seat"
+      ],
+      "arabic_marketing_adjectives": ["آمن", "سهل التنظيف", "قابل للتعديل", "عملي", "مريح"],
+      "arabic_feature_phrases": [
+        "حزام أمان خماسي النقاط", "ارتفاع قابل للتعديل", "صينية قابلة للإزالة",
+        "سهل التنظيف بالكامل", "قابل للطي للتخزين"
+      ],
+      "keywords": ["high chair", "feeding chair", "booster seat", "كرسي طعام", "كرسي مرتفع"]
+    },
+    "baby_clothes": {
+      "arabic_category_name": "ملابس أطفال",
+      "safety_standards": ["OEKO-TEX Standard 100", "EN 14682 (drawstrings safety)", "Flame resistance standards"],
+      "age_range": "Newborn - 5 years",
+      "mandatory_warnings": [
+        "Wash before first use",
+        "Remove all tags before dressing baby",
+        "Check for loose buttons or decorations — choking hazard",
+        "No drawstrings on children's garments under 7 years"
+      ],
+      "common_features": [
+        "100% cotton", "snap fasteners", "elasticated waistband",
+        "machine washable", "tagless design", "anti-scratch mittens",
+        "envelope neckline", "OEKO-TEX certified", "gentle dyes"
+      ],
+      "arabic_marketing_adjectives": ["ناعم الملمس", "لطيف على البشرة", "مريح", "متين", "أنيق"],
+      "arabic_feature_phrases": [
+        "قطن 100% ناعم", "خالٍ من المواد الضارة", "سهل الارتداء والخلع",
+        "لطيف على البشرة الحساسة", "قابل للغسيل في الغسالة"
+      ],
+      "keywords": ["clothes", "onesie", "romper", "outfit", "sleep suit", "ملابس", "بيبي جرو"]
+    },
+    "baby_toys": {
+      "arabic_category_name": "ألعاب أطفال",
+      "safety_standards": ["EN 71 Parts 1-3", "ASTM F963", "CE marked", "CPSC compliant"],
+      "age_range": "0 months+ (varies by toy)",
+      "mandatory_warnings": [
+        "Check age suitability — small parts are a choking hazard for under 3s",
+        "Supervise young children during play",
+        "Inspect regularly for damage — discard if broken",
+        "Remove batteries if toy is not in use for extended periods"
+      ],
+      "common_features": [
+        "non-toxic materials", "BPA-free", "sensory stimulation",
+        "high-contrast colors for newborns", "crinkle sounds", "rattles",
+        "activity features", "teething elements", "machine washable (soft toys)"
+      ],
+      "arabic_marketing_adjectives": ["آمن", "تعليمي", "ملوّن", "ممتع", "محفّز للحواس"],
+      "arabic_feature_phrases": [
+        "خامات غير سامة وآمنة", "ألوان زاهية لتحفيز البصر", "يحفز حواس الطفل",
+        "مناسب لعمر ٠ شهر فأكثر", "قابل للغسيل"
+      ],
+      "keywords": ["toy", "rattle", "teether", "activity", "plush", "soft toy", "لعبة", "ألعاب"]
+    },
+    "diaper_bag": {
+      "arabic_category_name": "حقيبة الحفاضات",
+      "safety_standards": ["OEKO-TEX Standard 100 (materials)", "Lead-free hardware"],
+      "age_range": "0-36 months",
+      "mandatory_warnings": [
+        "Keep medications and sharp objects in locked pockets",
+        "Do not leave on pram handle with sleeping baby unattended"
+      ],
+      "common_features": [
+        "insulated bottle pocket", "changing mat included", "multiple pockets",
+        "waterproof lining", "pram clips", "stroller straps",
+        "wide opening main compartment", "wipeable exterior",
+        "shoulder strap and backpack straps"
+      ],
+      "arabic_marketing_adjectives": ["واسعة", "عملية", "أنيقة", "منظمة", "مقاومة للماء"],
+      "arabic_feature_phrases": [
+        "جيب معزول للزجاجات", "حصيرة تغيير مرفقة", "بطانة مقاومة للماء",
+        "مشابك للتعليق على العربة", "فتحة رئيسية واسعة للوصول السريع"
+      ],
+      "keywords": ["diaper bag", "nappy bag", "changing bag", "mummy bag", "حقيبة حفاضات", "حقيبة أم"]
+    },
+    "nursing_pillow": {
+      "arabic_category_name": "وسادة الرضاعة",
+      "safety_standards": ["OEKO-TEX Standard 100", "CertiPUR-US (foam)", "Fire safety standards"],
+      "age_range": "For nursing mothers and infants 0-12 months",
+      "mandatory_warnings": [
+        "Never use as a sleep surface for baby — suffocation risk",
+        "Always supervise when baby is on pillow",
+        "Machine wash cover regularly"
+      ],
+      "common_features": [
+        "C-shape or crescent design", "memory foam or polyester fill",
+        "removable washable cover", "firm supportive density",
+        "non-slip base", "adjustable belt", "suitable for breast and bottle feeding"
+      ],
+      "arabic_marketing_adjectives": ["مريحة", "داعمة", "ناعمة", "عملية", "متعددة الاستخدام"],
+      "arabic_feature_phrases": [
+        "دعم مريح أثناء الرضاعة", "غطاء قابل للإزالة والغسيل",
+        "قاعدة مانعة للانزلاق", "مناسبة للرضاعة الطبيعية والصناعية"
+      ],
+      "keywords": ["nursing pillow", "feeding pillow", "breastfeeding pillow", "boppy", "وسادة رضاعة", "وسادة الرضاعة"]
+    }
+  },
+  "fallback_category": {
+    "arabic_category_name": "منتج أطفال",
+    "safety_standards": ["CE marked", "ASTM safety standards"],
+    "age_range": "Consult product label",
+    "mandatory_warnings": [
+      "Keep out of reach of children under 3 unless specified",
+      "Adult supervision recommended",
+      "Check product label for specific safety information"
+    ],
+    "common_features": [],
+    "arabic_marketing_adjectives": ["آمن", "عملي", "مريح"],
+    "arabic_feature_phrases": [],
+    "keywords": []
+  },
+  "arabic_conventions": {
+    "marketing_register": "Gulf Arabic — formal but warm, suitable for mothers aged 20-40 in UAE/Saudi/Kuwait/Qatar",
+    "tone": "Confident, caring, trustworthy — like advice from a knowledgeable friend, not a hard sell",
+    "avoid_literal_translations": [
+      {"english": "soft and smooth", "bad_arabic": "ناعم وأملس", "good_arabic": "ناعم الملمس ومريح"},
+      {"english": "high quality", "bad_arabic": "جودة عالية", "good_arabic": "متين وعالي الجودة"},
+      {"english": "easy to use", "bad_arabic": "سهل للاستخدام", "good_arabic": "سهل الاستخدام"},
+      {"english": "suitable for babies", "bad_arabic": "مناسب للأطفال الصغار", "good_arabic": "مصمم خصيصاً للأطفال الرضّع"},
+      {"english": "best choice", "bad_arabic": "أفضل اختيار", "good_arabic": "الخيار الأمثل للأمهات"},
+      {"english": "comfortable for baby", "bad_arabic": "مريح للطفل الرضيع", "good_arabic": "يوفر الراحة التامة لطفلك"}
+    ],
+    "preferred_sentence_starters": [
+      "صُمِّم خصيصاً لـ...",
+      "يوفر لطفلك...",
+      "مثالي للأمهات اللواتي يبحثن عن...",
+      "يجمع بين...",
+      "اكتشفي الفرق مع...",
+      "يمنح طفلك..."
+    ],
+    "preferred_adjective_patterns": [
+      "متين ومصنوع من مواد عالية الجودة",
+      "آمن ومعتمد دولياً",
+      "خفيف الوزن وسهل الحمل",
+      "مريح لطفلك وعملي لكِ",
+      "سهل التنظيف والصيانة"
+    ],
+    "rtl_note": "All Arabic content displays right-to-left. Bullet points appear on the right side.",
+    "currency_note": "Price references use AED (درهم إماراتي), SAR (ريال سعودي), or KWD (دينار كويتي)"
+  }
+}

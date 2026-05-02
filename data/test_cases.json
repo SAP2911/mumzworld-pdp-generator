@@ -1,0 +1,183 @@
+{
+  "description": "15 labeled test cases for the Mumzworld PDP Generator eval harness",
+  "tiers": {
+    "easy": "Clear product images — expect full output, correct category, confidence ≥0.55",
+    "medium": "Partial/ambiguous images — expect partial output, mixed confidence",
+    "adversarial": "Edge cases — non-products, blurry, wrong product type — expect review_required=true"
+  },
+  "test_cases": [
+    {
+      "id": "E1",
+      "tier": "easy",
+      "description": "Clear stroller photo with text labels",
+      "image_path": "data/sample_images/stroller_clear.jpg",
+      "expected": {
+        "detected_category": "stroller",
+        "min_overall_confidence": 0.55,
+        "must_contain_en_fields": ["title", "key_features", "safety_warnings"],
+        "must_contain_ar_fields": ["title", "key_features"],
+        "key_features_min_count": 3,
+        "notes": "Stroller with text labels — full EN+AR PDP expected, review flag acceptable for synthetic images"
+      }
+    },
+    {
+      "id": "E2",
+      "tier": "easy",
+      "description": "Branded feeding bottle with product details",
+      "image_path": "data/sample_images/bottle_branded.jpg",
+      "expected": {
+        "detected_category": "feeding_bottle",
+        "min_overall_confidence": 0.55,
+        "must_contain_en_fields": ["title", "safety_warnings"],
+        "must_contain_ar_fields": ["title"],
+        "key_features_min_count": 2,
+        "notes": "Branded bottle — category detection and bilingual output are the key checks"
+      }
+    },
+    {
+      "id": "E3",
+      "tier": "easy",
+      "description": "Baby carrier with ergonomic features listed",
+      "image_path": "data/sample_images/carrier_in_use.jpg",
+      "expected": {
+        "detected_category": "baby_carrier",
+        "min_overall_confidence": 0.50,
+        "must_contain_en_fields": ["key_features"],
+        "must_contain_ar_fields": ["key_features"],
+        "key_features_min_count": 3,
+        "notes": "Carrier image — correct category detection is primary check"
+      }
+    },
+    {
+      "id": "E4",
+      "tier": "easy",
+      "description": "Wooden baby toy blocks with safety certifications",
+      "image_path": "data/sample_images/toy_blocks.jpg",
+      "expected": {
+        "detected_category": "baby_toys",
+        "min_overall_confidence": 0.50,
+        "must_contain_en_fields": ["safety_warnings"],
+        "must_contain_ar_fields": [],
+        "notes": "Toy with age recommendation — safety warning and category are the key checks"
+      }
+    },
+    {
+      "id": "E5",
+      "tier": "easy",
+      "description": "Car seat with safety certification labels",
+      "image_path": "data/sample_images/car_seat_labeled.jpg",
+      "expected": {
+        "detected_category": "car_seat",
+        "min_overall_confidence": 0.55,
+        "must_contain_en_fields": ["safety_warnings", "age_suitability"],
+        "must_contain_ar_fields": [],
+        "notes": "Car seat with ECE R129 label — safety warnings and age range expected"
+      }
+    },
+    {
+      "id": "M1",
+      "tier": "medium",
+      "description": "Stroller from behind — partial visibility only",
+      "image_path": "data/sample_images/stroller_partial.jpg",
+      "expected": {
+        "detected_category": "stroller",
+        "min_overall_confidence": 0.35,
+        "max_key_features": 5,
+        "notes": "Partial stroller — fewer features, lower confidence acceptable"
+      }
+    },
+    {
+      "id": "M2",
+      "tier": "medium",
+      "description": "Product box only — contents inferred from text",
+      "image_path": "data/sample_images/product_box.jpg",
+      "expected": {
+        "min_overall_confidence": 0.35,
+        "notes": "Box-only image — product type inferred, confidence should be moderate"
+      }
+    },
+    {
+      "id": "M3",
+      "tier": "medium",
+      "description": "Multiple products in frame — stroller and bag",
+      "image_path": "data/sample_images/multiple_products.jpg",
+      "expected": {
+        "min_overall_confidence": 0.35,
+        "extraction_notes_not_empty": true,
+        "notes": "Multiple items — agent should identify primary product, note accessories"
+      }
+    },
+    {
+      "id": "M4",
+      "tier": "medium",
+      "description": "Arabic-only product packaging text",
+      "image_path": "data/sample_images/arabic_packaging.jpg",
+      "expected": {
+        "min_overall_confidence": 0.35,
+        "notes": "Arabic text packaging — product type identified, Arabic output quality tested"
+      }
+    },
+    {
+      "id": "M5",
+      "tier": "medium",
+      "description": "Lifestyle photo with baby in carrier, blurred background",
+      "image_path": "data/sample_images/lifestyle_blurry.jpg",
+      "expected": {
+        "min_overall_confidence": 0.25,
+        "notes": "Blurry lifestyle shot — low confidence expected, review may be required"
+      }
+    },
+    {
+      "id": "A1",
+      "tier": "adversarial",
+      "description": "Desert landscape — not a product at all",
+      "image_path": "data/sample_images/landscape.jpg",
+      "expected": {
+        "review_required": true,
+        "max_overall_confidence": 0.30,
+        "notes": "Non-product image — must trigger review_required, content should be empty/null"
+      }
+    },
+    {
+      "id": "A2",
+      "tier": "adversarial",
+      "description": "Heavily degraded/blurry product image",
+      "image_path": "data/sample_images/product_blurry.jpg",
+      "expected": {
+        "review_required": true,
+        "notes": "Blurry image — should refuse or return very low confidence"
+      }
+    },
+    {
+      "id": "A3",
+      "tier": "adversarial",
+      "description": "Kitchen coffee maker — wrong product category for Mumzworld",
+      "image_path": "data/sample_images/kitchen_appliance.jpg",
+      "expected": {
+        "review_required": true,
+        "notes": "Non-baby product — pipeline should flag as out-of-scope"
+      }
+    },
+    {
+      "id": "A4",
+      "tier": "adversarial",
+      "description": "Sealed shipping box with no product visible",
+      "image_path": "data/sample_images/box_only.jpg",
+      "expected": {
+        "review_required": true,
+        "notes": "Shipping box — product unknown, must not hallucinate contents"
+      }
+    },
+    {
+      "id": "A5",
+      "tier": "adversarial",
+      "description": "Completely black image — no content",
+      "image_path": "data/sample_images/black.jpg",
+      "expected": {
+        "review_required": true,
+        "max_overall_confidence": 0.15,
+        "notes": "Black image — must fail gracefully with review_required=true, no crash"
+      }
+    }
+  ]
+}

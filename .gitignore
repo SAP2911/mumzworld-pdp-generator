@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+evals/results/*.json
+data/sample_images/
+*.DS_Store
+# Temp utility scripts
+test_model.py
+test_vision_candidates.py
+list_models.py
