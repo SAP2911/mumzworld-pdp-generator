@@ -19,14 +19,14 @@ An AI PDP generator that handles the bilingual copy, respects category safety st
 
 ## Architecture Decisions
 
-### Model: OpenRouter Free Tier over Direct API Keys
+### Model: Groq Free Tier (Llama-4-Scout) over Direct API Keys
 
-**Chose:** Free vision-capable models via OpenRouter (OpenAI-compatible SDK)  
-**Rejected:** Direct Gemini API key, Claude API key (both require payment for production usage)
+**Chose:** `meta-llama/llama-4-scout-17b-16e-instruct` via Groq free API (OpenAI-compatible SDK)  
+**Rejected:** Gemini API (quota exhausted), NVIDIA NIM (reliable but slow, ~60s/run), OpenRouter (free model endpoints unstable)
 
-**Reasoning:** The brief encourages free tools. OpenRouter provides access to multiple free vision-capable models (Gemini, Gemma, NVIDIA Nemotron, etc.) through a unified OpenAI-compatible API. This makes the codebase model-agnostic — swapping models is a one-line `.env` change, not a code rewrite. The OpenAI Python SDK is battle-tested and well-documented.
+**Reasoning:** The brief encourages free tools. Groq's free tier provides fast inference (~5s per pipeline run vs. 60s on NVIDIA NIM) with a generous daily limit. The codebase is model-agnostic via a priority chain: Groq → NVIDIA NIM → OpenRouter. Swapping backends is a one-line `.env` change.
 
-**Tradeoff:** Free tier is capped at 50 requests/day. For production, adding $10 in OpenRouter credits unlocks 1000 req/day — or switching to a direct API key for a specific model (Gemini, Claude) removes the cap entirely.
+**Tradeoff:** Groq free tier has a requests-per-minute cap — handled by `retry_on_rate_limit()` with exponential back-off. For production, a paid Groq tier or a direct hosted model removes the cap entirely.
 
 ---
 
